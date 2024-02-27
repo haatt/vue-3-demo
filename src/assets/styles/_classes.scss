@@ -1,0 +1,11 @@
+@use "./variables";
+
+.re-bg {
+  &-grey-1 {
+    text-decoration-color: variables.$grey-1;
+  }
+
+  &-white {
+    text-decoration-color: variables.$white;
+  }
+}
