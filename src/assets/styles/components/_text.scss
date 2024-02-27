@@ -1,0 +1,31 @@
+@use "../variables";
+
+.re-text {
+  &-bold {
+    font-weight: bold;
+  }
+
+  &-blue {
+    color: variables.$blue;
+  }
+
+  &-dark {
+    color: variables.$dark-grey;
+  }
+
+  &-grey {
+    color: variables.$grey;
+  }
+
+  &-green {
+    color: variables.$green;
+  }
+
+  &-orange {
+    color: variables.$orange;
+  }
+
+  &-white {
+    color: variables.$white;
+  }
+}

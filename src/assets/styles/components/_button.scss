@@ -1,0 +1,185 @@
+@use "./../variables";
+
+.re-btn {
+  @apply tw-h-fit
+  tw-flex
+  tw-items-center
+  tw-justify-center
+  tw-text-center
+  tw-rounded-lg
+  tw-border
+  tw-text-white
+  tw-outline-none
+  tw-text-[15px]
+  tw-font-semibold
+  tw-font-[Inter];
+
+  &:hover {
+    opacity: variables.$button-opacity;
+  }
+
+  &:active {
+    opacity: variables.$button-click;
+  }
+
+  // Sizes
+  &-full {
+    button.re-btn#{&} {
+      width: 100%;
+    }
+  }
+
+  &-auto {
+    button.re-btn#{&} {
+      width: auto;
+    }
+  }
+
+  &-xs {
+    padding: 0.25rem 0.75rem;
+  }
+
+  &-sm {
+    padding: 0.5rem 0.75rem;
+  }
+
+  &-md {
+    padding: 0.625rem 1.25rem;
+  }
+
+  &-lg {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  &-xl {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  // Colors
+  &-black {
+    @apply tw-bg-r-dark-grey tw-border-[1px] tw-border-r-dark-grey tw-text-white;
+  }
+
+  &-white {
+    @apply tw-bg-white tw-border-[1px] tw-border-white;
+  }
+
+  &-green {
+    @apply tw-bg-r-green tw-text-white tw-border-[1px] tw-border-r-green;
+  }
+
+  &-orange {
+    @apply tw-bg-r-orange tw-border-[1px] tw-border-r-orange tw-text-white;
+  }
+
+  &-red {
+    @apply tw-bg-r-red tw-border-[1px] tw-border-r-red tw-text-white;
+  }
+
+  &-grey {
+    background-color: variables.$grey;
+    border-color: variables.$grey-1;
+  }
+
+  &-dark-grey {
+    @apply tw-bg-[#575B61] tw-border-[1px] tw-border-[#575B61] tw-text-white;
+  }
+
+  &-blue-1 {
+    @apply tw-bg-r-blue-1 tw-border-blue-500 tw-text-white;
+  }
+
+  &-navy-blue {
+    @apply tw-bg-r-navy-blue tw-border-r-navy-blue tw-text-white;
+  }
+
+  &-transparent-disabled {
+    background-color: transparent;
+    opacity: 0.7;
+  }
+
+  &-outline {
+    &.re-btn-black {
+      border-width: 1px;
+      border-style: solid;
+      background-color: variables.$white;
+      border-color: variables.$dark-grey;
+      color: variables.$dark-grey;
+
+      &:hover {
+        background-color: #f3f4f6;
+      }
+    }
+
+    &.re-btn-green {
+      @apply tw-bg-[rgba(101,_219,_176,_0.2)] tw-border-[1px] tw-border-r-green tw-text-r-grey;
+
+      &:hover {
+        @apply tw-text-[rgba(101,_219,_176,_0.7)];
+      }
+    }
+
+    &.re-btn-orange {
+      background-color: rgba(255, 131, 131, 0.2);
+      border: 1px solid variables.$orange;
+      color: variables.$orange;
+
+      &:hover {
+        color: rgba(255, 131, 131, 0.7);
+      }
+    }
+
+    &.re-btn-grey {
+      background-color: rgba(167, 167, 167, 0.2);
+      border: 1px solid variables.$grey;
+      color: variables.$grey;
+
+      &:hover {
+        color: rgba(167, 167, 167, 0.7);
+      }
+    }
+
+    &.re-btn-xs {
+      padding: 0.375rem 0.75rem;
+    }
+
+    &.re-btn-sm {
+      padding: 0.4375rem 0.75rem;
+    }
+
+    &.re-btn-md {
+      padding: 0.5625rem 1.25rem;
+    }
+
+    &.re-btn-lg {
+      padding: 0.5625rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    &.re-btn-xl {
+      padding: 0.8125rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  &-disabled {
+    @apply tw-pointer-events-none tw-opacity-50;
+  }
+}
+
+.re-link {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
