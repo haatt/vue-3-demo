@@ -1,5 +1,6 @@
 module.exports = {
   devServer: {
+    port: 1080,
     allowedHosts: "all",
     client: {
       webSocketURL: {

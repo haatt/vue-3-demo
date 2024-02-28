@@ -12,10 +12,12 @@
   tw-outline-none
   tw-text-[15px]
   tw-font-semibold
-  tw-font-[Inter];
+  tw-font-[Inter]
+  tw-shadow-sm;
 
   &:hover {
     opacity: variables.$button-opacity;
+    @apply hover:tw-shadow-md;
   }
 
   &:active {
@@ -63,7 +65,7 @@
   }
 
   &-white {
-    @apply tw-bg-white tw-border-[1px] tw-border-white;
+    @apply tw-bg-white tw-border-[1px] tw-text-black tw-border-r-blue-grey;
   }
 
   &-green {
@@ -178,6 +180,7 @@
   cursor: pointer;
   color: inherit;
   text-decoration: underline;
+  @apply tw-text-blue-600;
 
   &:hover {
     text-decoration: none;

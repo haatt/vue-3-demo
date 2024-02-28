@@ -1,9 +1,9 @@
 <template>
   <div class="app-component">
-    <div class="tw-w-[1536px]">
-      <DefaultTemplate>
+    <div class="app-component-container">
+      <Transition>
         <router-view />
-      </DefaultTemplate>
+      </Transition>
     </div>
   </div>
 </template>
@@ -11,15 +11,17 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import DefaultTemplate from "@/components/templates/DefaultTemplate.vue";
-
-import availableRoutes from "@/router/routes";
-
 export default defineComponent({
-  components: {
-    DefaultTemplate,
-  },
+  components: {},
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.app-component {
+  @apply tw-flex tw-justify-center tw-w-full;
+
+  &-container {
+    @apply tw-max-w-[1536px] tw-w-full tw-flex tw-justify-center;
+  }
+}
+</style>

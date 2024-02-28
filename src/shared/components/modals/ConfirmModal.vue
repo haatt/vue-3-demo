@@ -22,7 +22,7 @@
           size="xs"
           @click="closeModal"
         >
-          <CloseIcon class="close-icon tw-w-[28px]" fill="#FFFFFF" />
+          <CloseIcon class="close-icon tw-w-[24px]" fill="#FFFFFF" />
           <span>{{ cancelButton }}</span>
         </ButtonComponent>
 

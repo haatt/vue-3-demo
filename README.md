@@ -1,10 +1,10 @@
-# medical-client
+# vue-demo
 
 ## Project setup
 
 ```
-Make sure node 16.16 is installed: node -v
-node version: https://nodejs.org/en/blog/release/v16.16.0/
+Make sure node 18.18.2 is installed: node -v
+node version: https://nodejs.org/en/blog/release/v18.18.2/
 update npm: npm install -g npm
 npm install
 ```
