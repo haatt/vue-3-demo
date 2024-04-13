@@ -64,7 +64,12 @@
 
       <template #footer>
         <div class="tw-flex tw-justify-end tw-space-x-6">
-          <ButtonComponent id="cancel" themeColor="red" size="xs" @click="closeModal('form-modal')">
+          <ButtonComponent
+            id="cancel"
+            themeColor="red"
+            size="xs"
+            @click="onOpenModal('confirm-modal-for-static')"
+          >
             <CloseIcon class="close-icon tw-w-[24px] tw-fill-white" />
             <span>Cancel</span>
           </ButtonComponent>
@@ -80,6 +85,18 @@
         </div>
       </template>
     </GenericModal>
+    <ConfirmModal
+      modalId="confirm-modal-for-static"
+      message="Are you sure?"
+      title="First confirmation modal"
+      @onConfirm="onConfirmFirstModal"
+    />
+    <ConfirmModal
+      modalId="confirm-modal-for-confirm-modal"
+      message="Are you really really sure!!!!"
+      title="Second confirmation modal"
+      @onConfirm="onConfirmSecondModal"
+    />
 
     <GenericModal id="xl-modal" title="Generic Modal" size="xl">
       <template #body>
@@ -114,6 +131,12 @@ const onConfirm = function (): void {
 };
 const closeModal = function (modalId: string) {
   ModalHandler.close(modalId);
+};
+const onConfirmFirstModal = function () {
+  ModalHandler.open("confirm-modal-for-confirm-modal");
+};
+const onConfirmSecondModal = function () {
+  ModalHandler.close("form-modal");
 };
 </script>
 
